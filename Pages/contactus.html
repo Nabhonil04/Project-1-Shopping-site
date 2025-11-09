@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | NOVAWEAR</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tektur">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #0D0D0D;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/login.jpg");
+            background-size: cover;
+            background-position: center;
+            font-family: Tektur;
+            color: white;
+        }
+
+        .container-fluid {
+            padding: 0px 0px;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .navbar li a::after {
+            background-color: black;
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 0;
+            left: 0px;
+            bottom: 0px;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        .navbar li a:hover::after {
+            width: 100%;
+        }
+
+        nav {
+            background-color: #292828;
+            transition: 0.5s;
+            text-align: left;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        #nav2 {
+            margin-right: 30px;
+        }
+
+        #login:hover {
+            border-color: black;
+        }
+
+        #x {
+            width: 100%;
+        }
+
+        #head {
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #ContactUs {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .form-shape {
+            margin-bottom: 20px;
+        }
+
+        .form-shape label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-shape input, .form-shape select, .form-shape textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .form-shape textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        #radio {
+            margin-bottom: 20px;
+        }
+
+        #radio input {
+            margin-right: 15px;
+            margin-left: 5px;
+        }
+
+        .btn-submit {
+            background-color: #00eaff;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-submit:hover {
+            background-color: #00c6d8;
+            transform: scale(1.05);
+        }
+
+        .btn-reset {
+            background-color: #ff5252;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-reset:hover {
+            background-color: #ff0000;
+            transform: scale(1.05);
+        }
+
+        #conclusion {
+            background: black;
+            margin-top: 50px;
+            font-family: sans-serif;
+            height: max-content;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("nav").mouseenter(function () {
+                $("nav").css({ "background-color": "white" });
+                $(".navbar-link").css({ "color": "black" });
+            });
+
+            $("nav").mouseleave(function () {
+                $("nav").css({ "background-color": "#292828" });
+                $(".navbar-link").css({ "color": "white" });
+            });
+
+            $("#head").click(function () {
+                window.location.href = "../index.html";
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm sticky-top navbar-light d-flex justify-content-between">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navigation">
+                <div id="x" class="d-flex justify-content-between">
+                    <ul class="navbar-nav">
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="Men.html">Men</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="Women.html">Women</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="Accessories.html">Accessories</a>
+                        </li>
+                        <li class="navbar-item active">
+                            <a class="navbar-link" href="contactus.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <ul id="nav2" class="navbar-nav">
+                        <li class="navbar-item">
+                            <button id="login" class="btn btn-outline-light"><a class="navbar-link" href="Login.html">Log in</a></button>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="userprofile.html"><span class="fa fa-user-circle"
+                                    style="font-size: 30px;"></span></a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="cart.html"><span class="fa fa-shopping-bag"
+                                    style="font-size: 20px;"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h1 id="head" class="text-center text-light">NOVAWEAR</h1>
+
+        <div id="ContactUs" class="mt-5">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <p class="text-center mb-4">We're here to help with any questions or concerns you may have about our products or services.</p>
+            
+            <form action="#" class="needs-validation" novalidate>
+                <div class="form-shape">
+                    <label for="query">Type of Query:</label>
+                    <select name="myQuery" id="query" class="form-control" required>
+                        <option value="" selected disabled>Select your query type</option>
+                        <option value="ord">Order related Issues</option>
+                        <option value="Site">Site related Issues</option>
+                        <option value="fed">Complaint related Issues</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                
+                <div class="form-shape">
+                    <label for="name">Full Name:</label>
+                    <input type="text" name="myName" id="name" class="form-control" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-shape">
+                    <label for="email">Email Address:</label>
+                    <input type="email" name="myEmail" id="email" class="form-control" placeholder="Enter your email address" required>
+                </div>
+                
+                <div class="form-shape">
+                    <label for="pho">Phone Number:</label>
+                    <input type="tel" name="myPhone" id="pho" class="form-control" placeholder="Enter your phone number" required>
+                </div>
+                
+                <div id="radio" class="form-shape">
+                    <label>Are you a member of NOVAWEAR?</label>
+                    <div class="d-flex">
+                        <div class="form-check mr-4">
+                            <input type="radio" class="form-check-input" id="member-yes" name="eligible" value="yes" required>
+                            <label class="form-check-label" for="member-yes">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="member-no" name="eligible" value="no" required>
+                            <label class="form-check-label" for="member-no">No</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-shape">
+                    <label for="message">Describe your query in detail:</label>
+                    <textarea name="mesg" id="message" class="form-control" rows="5" placeholder="Please provide as much detail as possible about your query" required></textarea>
+                </div>
+                
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="submit" class="btn-submit">Submit Query</button>
+                    <button type="reset" class="btn-reset">Reset Form</button>
+                </div>
+            </form>
+
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <h4><i class="fa fa-map-marker"></i> Our Location</h4>
+                    <p>123 Fashion Street<br>Tech District<br>Cyberpunk City, 54321<br>India</p>
+                </div>
+                <div class="col-md-6">
+                    <h4><i class="fa fa-clock-o"></i> Business Hours</h4>
+                    <p>Monday - Friday: 9:00 AM - 8:00 PM<br>Saturday: 10:00 AM - 6:00 PM<br>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="conclusion" class="">
+            <h6 class="text-center text-muted"> Promotion ends 1.8.24 at 11:59 PM PT. Prices are as marked.</h6>
+            <h6 class="text-center text-muted">Exclusions apply. Cannot be combined with any other offer. Only valid at NOVAWEAR.</h6>
+            <h6 class="text-center text-muted">Not valid on gift cards or previous purchases.</h6>
+            <h4 class="text-light">NOVAWEAR</h4>
+            <p class="text-muted small">CA Transparency In Supply Chain | Privacy Policy | Interest Based Ads | Do Not Sell or Share My Personal Information | Terms & Conditions | Web ID: 246409064 | Copyright © 2024 NOVAWEAR. All rights reserved.
+            </p>
+            <h3 class="text-muted"><span class="fa fa-map-marker"></span> India</h3>
+        </div>
+    </div>
+
+    <script>
+        // Form validation script
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        } else {
+                            event.preventDefault();
+                            alert('Thank you for your submission! We will get back to you shortly.');
+                            form.reset();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</body>
+
+</html>
+

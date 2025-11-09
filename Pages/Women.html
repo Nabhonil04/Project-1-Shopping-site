@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Fashion | NOVAWEAR</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tektur">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-color:black;
+            font-family: Tektur;
+            color: white;
+        }
+        a{
+            color:white;
+            text-decoration: none;
+            position: relative;
+        }
+        a::after{
+            content: "";
+            position: absolute;
+            background-color: white;
+            height:2px;
+            width:0;
+            left:0px;
+            bottom:0px;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+        a:hover:after{
+           width:100%;
+        }
+        a:hover{
+            color:white;
+            text-decoration: none;
+
+        }
+        .container-fluid{
+            margin:0px;
+            padding:0px;
+        }
+        .navbar li a{
+            color:white;
+            position: relative;
+        }
+        .navbar li a::after{
+            background-color: black;
+        }
+        nav{
+            background-color: #292828;
+            transition: 0.5s;
+        }
+        nav li{
+            margin-left:20px;
+        }
+        #nav2{
+            margin-right:30px;
+        }
+        #nav2 a::after{
+            width:0%;
+        }
+        #login:hover{
+            border-color: black;
+        }
+        #search i{
+            padding:5px 10px 5px 10px;
+            font-size: 20px;
+            border:01px solid white;
+        }
+        #main{
+            margin:0px 0px;
+        }
+        #filter{
+            padding:0px 0px;
+            height: max-content;
+            position: sticky;
+            top:0;
+        }
+        @media(max-width:430px){
+            #filter{
+                position:static;
+            }
+        }
+        .sort,.category,.price{
+            padding: 10px;
+        }
+        .card{
+            padding:0px 0px;
+            color:black;
+            margin:5px;
+            margin-bottom:20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .card:hover{
+            transform: scale(105%);
+        }
+        .card-body{
+            padding:10px;
+            height:max-content
+        }
+        #x{
+            width:100%;
+        }
+        #head{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("nav").mouseenter(function(){
+                $("nav").css({"background-color":"white"});
+                $(".navbar-link").css({"color":"black"});
+            });
+
+            $("nav").mouseleave(function(){
+                $("nav").css({"background-color":"#292828"});
+                $(".navbar-link").css({"color":"white"});
+            });
+            $("#sorthead").click(function(){
+                if($("#ar1").attr("class")=="fa fa-chevron-up"){
+                    $("#ar1").attr("class","fa fa-chevron-down")
+                }
+                else{
+                    $("#ar1").attr("class","fa fa-chevron-up")
+                }
+            });
+            $("#cathead").click(function(){
+                if($("#ar2").attr("class")=="fa fa-chevron-up"){
+                    $("#ar2").attr("class","fa fa-chevron-down")
+                }
+                else{
+                    $("#ar2").attr("class","fa fa-chevron-up")
+                }
+            });
+            $("#pricehead").click(function(){
+                if($("#ar3").attr("class")=="fa fa-chevron-up"){
+                    $("#ar3").attr("class","fa fa-chevron-down")
+                }
+                else{
+                    $("#ar3").attr("class","fa fa-chevron-up")
+                }
+            });
+            $("#input").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $(".card").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+            $("#card1").click(function(){
+                window.location.href="../Products/product21.html";
+            });
+            $("#card2").click(function(){
+                window.location.href="../Products/product2.html";
+            });
+            $("#card3").click(function(){
+                window.location.href="../Products/product22.html";
+            });
+            $("#card4").click(function(){
+                window.location.href="../Products/product23.html";
+            });
+            $("#card5").click(function(){
+                window.location.href="../Products/product24.html";
+            });
+            $("#card6").click(function(){
+                window.location.href="../Products/product25.html";
+            });
+            $("#card7").click(function(){
+                window.location.href="../Products/product26.html";
+            });
+            $("#card8").click(function(){
+                window.location.href="../Products/product27.html";
+            });
+            $("#card9").click(function(){
+                window.location.href="../Products/product28.html";
+            });
+            $("#card10").click(function(){
+                window.location.href="../Products/product29.html";
+            });
+            $("#card11").click(function(){
+                window.location.href="../Products/product30.html";
+            });
+            $("#card12").click(function(){
+                window.location.href="../Products/product31.html";
+            });
+            $("#head").click(function(){
+                window.location.href="../index.html";
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm sticky-top navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" 
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navigation">
+            <div id="x" class="d-flex justify-content-between">
+            <ul class="navbar-nav">
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../index.html">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="Men.html">Men</a>
+                </li>
+                <li class="navbar-item active">
+                    <a class="navbar-link" href="Women.html">Women</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="Accessories.html">Accessories</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="contactus.html">Contact Us</a>
+                </li>
+            </ul>
+            <ul id="nav2" class="navbar-nav">
+                <li class="navbar-item">
+                    <button id="login" class="btn btn-outline-light"><a class="navbar-link" href="Login.html">Log in</a></button>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="userprofile.html"><span class="fa fa-user-circle" style="font-size: 30px;"></span></a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="cart.html"><span class="fa fa-shopping-bag" style="font-size: 20px;"></span></a>
+                </li>
+            </ul>
+            </div>
+            </div>
+        </nav>
+        <br>
+        <h3 id="head" class="text-center">NOVAWEAR</h3>
+        <div id="search" class="col-md-6 mx-auto">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <i class="fa fa-search"></i>
+                </div>
+                <input id="input" class="form-control form-input" type="text" placeholder="Search Anything...">
+                <div class="input-group-append">
+                    </span><i class="fa fa-microphone"></i>
+                </div>
+            </div>
+        </div>
+        <hr class="bg-light">
+        <div id="main" class="row">
+            <div id="filter" class="col-md-3">
+                <h2>Women's Fashion</h2>
+                <hr class="bg-light">
+                <div class="sort">
+                <div id="sorthead" class="d-flex justify-content-between" data-toggle="collapse" data-target="#sortby" aria-expanded="false" aria-controls="collapseExample">
+                    <h4>Sort by</h4>
+                    <span id="ar1" class="fa fa-chevron-up"></span>
+                </div>
+                <div id="sortby" class="collapse">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort">
+                        <label class="form-check-label" for="sort">Featured</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort">
+                        <label class="form-check-label" for="sort">Newest</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort">
+                        <label class="form-check-label" for="sort">Price Low To High</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort">
+                        <label class="form-check-label" for="sort">Price High To Low</label>
+                    </div>
+                </div>
+                </div>
+                <hr class="bg-light">
+                <div class="category">
+                <div id="cathead" class="d-flex justify-content-between" data-toggle="collapse" data-target="#catby" aria-expanded="false" aria-controls="collapseExample">
+                    <h4>category</h4>
+                    <span id="ar2" class="fa fa-chevron-up"></span>
+                </div>
+                <div id="catby" class="collapse">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="sort">
+                        <label class="form-check-label">Shirts</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="sort">
+                        <label class="form-check-label">Jackets</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="sort">
+                        <label class="form-check-label">Shoes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="sort">
+                        <label class="form-check-label">Hoodies</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="sort">
+                        <label class="form-check-label">Socks</label>
+                    </div>
+                </div>
+                </div>
+                <hr class="bg-light">
+                <div class="price">
+                <div id="pricehead" class="d-flex justify-content-between" data-toggle="collapse" data-target="#priceby" aria-expanded="false" aria-controls="collapseExample">
+                    <h4>Price</h4>
+                    <span id="ar3" class="fa fa-chevron-up"></span>
+                </div>
+                <div id="priceby" class="collapse">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort">
+                        <label class="form-check-label" for="sort">$25 - $50 </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort">
+                        <label class="form-check-label" for="sort">$50 - $100 </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort">
+                        <label class="form-check-label" for="sort">$100 - $150</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort">
+                        <label class="form-check-label" for="sort">$150 - $300</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort">
+                        <label class="form-check-label" for="sort">$300+</label>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-9 d-flex flex-wrap justify-content-around">
+                <div id="card1" class="card col-md-3 col-sm-12">
+                    <img class="card-img-top" src="C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/futuristic-kimono_600x.webp" >
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            KIMONO STREETWEAR
+                            <br>
+                            <span class="text-muted">$79.99</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="card2" class="card col-md-3 col-sm-12">
+                    <img class="card-img-top" src="C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/modern-kimono_400x.webp" >
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            KIMONO NOVAWEAR
+                            <br>
+                            <span class="text-muted">$59.99</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="card3" class="card col-md-3 col-sm-12">
+                    <img class="card-img-top" src="C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/black-goth-skirt-techwear-110_540x.webp" >
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            BLACK GOTH SKIRT
+                            <br>
+                            <span class="text-muted">$59.99</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="card4" class="card col-md-3 col-sm-12">
+                    <img class="card-img-top" src="C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/cargo-jacket-women-techwear-839_540x.webp">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            CARGO JACKET WOMEN
+                            <br>
+                            <span class="text-muted">$89.99</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="card5" class="card col-md-3 col-sm-12">
+                    <img class="card-img-top" src="C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/womens-tactical-cargo-pants-techwear-752_540x.webp">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            WOMEN TACTICAL CARGO PANTS
+                            <br>
+                            <span class="text-muted">$49.99</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="card6" class="card col-md-3 col-sm-12">
+                    <img class="card-img-top" src="C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/techwear-women-pants-techwear-225_540x.webp">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            WOMEN NOVAWEAR PANTS
+                            <br>
+                            <span class="text-muted">$59.99</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="card7" class="card col-md-3 col-sm-12">
+                    <img class="card-img-top" src="C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/black-cargo-skirt-techwear-429_540x.webp">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            BLACK CARGO SKIRT
+                            <br>
+                            <span class="text-muted">$49.99</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="card8" class="card col-md-3 col-sm-12">
+                    <img class="card-img-top" src="C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/devil-horn-hoodie-techwear-279_540x.webp">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            DEVIL HORN HOODIE
+                            <br>
+                            <span class="text-muted">$49.99</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="card9" class="card col-md-3 col-sm-12">
+                    <img class="card-img-top" src="C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/boots-with-pockets-techwear-420_540x.webp">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            BOOTS WITH POCKETS
+                            <br>
+                            <span class="text-muted">$129.99</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="card10" class="card col-md-3 col-sm-12">
+                    <img class="card-img-top" src="C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/cargo-utility-jacket-womens-techwear-179_540x.webp">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            CARGO UTILITY JACKET WOMEN'S
+                            <br>
+                            <span class="text-muted">$179.99</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="card11" class="card col-md-3 col-sm-12">
+                    <img class="card-img-top" src="C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/goth-platform-sneakers-techwear-542_540x.webp">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            GOTH PLATFORM SNEAKERS
+                            <br>
+                            <span class="text-muted">$89.99</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="card12" class="card col-md-3 col-sm-12">
+                    <img class="card-img-top" src="C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/lunarcore-jacket-techwear-768_540x.webp">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            LUNARCORE JACKET
+                            <br>
+                            <span class="text-muted">$99.99</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

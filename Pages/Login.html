@@ -1,0 +1,322 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tektur">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <title>Login Page | NOVAWEAR</title>
+  <style>
+    body {
+      background-color: #0D0D0D;
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url("C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/login.jpg");
+      background-size: cover;
+      background-position: center;
+      font-family: Tektur;
+    }
+
+    .container-fluid {
+      padding: 0px 0px;
+    }
+
+    .navbar li a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .navbar li a::after {
+      background-color: black;
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 0;
+      left: 0px;
+      bottom: 0px;
+      transition: 0.3s;
+      box-sizing: border-box;
+    }
+
+    .navbar li a:hover::after {
+      width: 100%;
+    }
+
+    nav {
+      background-color: #292828;
+      transition: 0.5s;
+      text-align: left;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    #nav2 {
+      margin-right: 30px;
+    }
+
+    #head {
+      margin-top: 10px;
+    }
+
+    #conclusion {
+      background: black;
+      margin-top: 150px;
+      font-family: sans-serif;
+      height: max-content;
+      padding: 20px;
+    }
+
+    #x {
+      width: 100%;
+    }
+
+    #form {
+      margin: auto;
+      border: 1px solid white;
+      background: transparent;
+      backdrop-filter: blur(20px);
+      padding: 10px;
+      position: relative;
+      border-radius: 10px;
+    }
+
+    @media(max-width: 430px) {
+      #form {
+        width: 300px;
+      }
+    }
+
+    .box {
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      position: relative;
+      width: 100%;
+      height: 50px;
+      border-bottom: 2px solid white;
+    }
+
+    .box label {
+      position: absolute;
+      color: white;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .box span {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      color: white;
+    }
+
+    .box input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      color: white;
+      background: transparent;
+      outline: none;
+    }
+
+    #eye {
+      cursor: pointer;
+    }
+
+    input[type=password]::-ms-reveal,
+    input[type=password]::-ms-clear {
+      display: none;
+    }
+
+    #login {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    #form small a {
+      text-decoration: none;
+    }
+
+    #form small a:hover {
+      text-decoration: none;
+    }
+
+    #forgot {
+      cursor: pointer;
+    }
+
+    #b3,
+    #b4,
+    #alert,
+    #sendotp {
+      display: none;
+    }
+
+    #head {
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $("nav").mouseenter(function () {
+        $("nav").css({ "background-color": "white" });
+        $(".navbar-link").css({ "color": "black" });
+      });
+
+      $("nav").mouseleave(function () {
+        $("nav").css({ "background-color": "#292828" });
+        $(".navbar-link").css({ "color": "white" });
+      });
+      $("#i1").blur(function () {
+        if ($(this).val() == '')
+          $("#i1l").animate({ top: "50%" }, "fast");
+        else
+          $("#i1l").animate({ top: "5px" }, "fast");
+      });
+      $("#i1").focus(function () {
+        $("#i1l").animate({ top: "-5px" }, "fast");
+      });
+      $("#i2").blur(function () {
+        if ($(this).val() == '')
+          $("#i2l").animate({ top: "50%" }, "fast");
+        else
+          $("#i2l").animate({ top: "5px" }, "fast");
+      });
+      $("#i2").focus(function () {
+        $("#i2l").animate({ top: "-5px" }, "fast");
+      });
+      $("#i3").blur(function () {
+        if ($(this).val() == '')
+          $("#i3l").animate({ top: "50%" }, "fast");
+        else
+          $("#i3l").animate({ top: "5px" }, "fast");
+      });
+      $("#i3").focus(function () {
+        $("#i3l").animate({ top: "-5px" }, "fast");
+      });
+      $("#i4").blur(function () {
+        if ($(this).val() == '')
+          $("#i4l").animate({ top: "50%" }, "fast");
+        else
+          $("#i4l").animate({ top: "5px" }, "fast");
+      });
+      $("#i4").focus(function () {
+        $("#i4l").animate({ top: "-5px" }, "fast");
+      });
+      $("#eye").click(function () {
+        if ($("#eye").attr("class") == "fa fa-eye") {
+          $("#eye").attr("class", "fa fa-eye-slash")
+          $("#i2").attr("type", "text");
+        }
+        else if ($("#eye").attr("class") == "fa fa-eye-slash") {
+          $("#eye").attr("class", "fa fa-eye")
+          $("#i2").attr("type", "password");
+        }
+      });
+      $("#forgot").click(function () {
+        $("#forgot").hide();
+        $("#b1,#b2").hide();
+        $("#b3,#sendotp,#b4").slideDown();
+        $("#i1,#i2").removeAttr("required");
+        $("#i3,#i4").attr("required", "");
+
+      });
+      $("#sendotp").click(function () {
+        $("#alert").slideDown()
+      });
+      $("#head").click(function () {
+        window.location.href = "../index.html";
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-sm sticky-top navbar-light d-flex justify-content-between">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navigation">
+        <div id="x" class="d-flex justify-content-between">
+          <ul class="navbar-nav">
+            <li class="navbar-item">
+              <a class="navbar-link" href="../index.html">Home</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="Men.html">Men</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="Women.html">Women</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="Accessories.html">Accessories</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="contactus.html">Contact Us</a>
+            </li>
+            <li class="navbar-item active">
+              <a class="navbar-link" href="Login.html">Log in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="alert" class="alert alert-success alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      We have sent a <b>OTP</b> to your Email Id!
+    </div>
+    <h1 id="head" class="text-center text-light">NOVAWEAR</h1>
+    <div id="form" class="col-lg-4 col-md-5 col-sm-8 col-xs-10">
+      <form>
+        <h2 class="text-center text-light">Log in Form</h2>
+        <div id="b1" class="box">
+          <span class="fa fa-user"></span>
+          <label id="i1l">Username</label>
+          <input id="i1" type="text" required>
+        </div>
+        <div id="b2" class="box">
+          <span id="eye" class="fa fa-eye"></span>
+          <label id="i2l">Password</label>
+          <input id="i2" type="password" required="">
+        </div>
+        <h6 id="forgot" class="text-center text-warning">Forgot password ?</h6>
+        <div id="b3" class="box">
+          <label id="i3l">Enter Email</label>
+          <input id="i3" type="email">
+        </div>
+        <button id="sendotp" class="btn btn-outline-light" type="button">Send OTP</button>
+        <div id="b4" class="box">
+          <label id="i4l">Enter OTP</label>
+          <input id="i4" type="text">
+        </div>
+        <button id="login" type="submit" class=" form-control btn btn-outline-light">Log in</button>
+        <small class="text-light"> Dont have an account? <a href="SignUp.html" target="_blank">Create
+            account</a></small>
+      </form>
+    </div>
+    <div id="conclusion" class="">
+      <h6 class="text-center text-muted"> Promotion ends 1.8.24 at 11:59 PM PT. Prices are as marked.</h6>
+      <h6 class="text-center text-muted">Exclusions apply. Cannot be combined with any other offer. Only valid at
+        NOVAWEAR.</h6>
+      <h6 class="text-center text-muted">Not valid on gift cards or previous purchases.</h6>
+      <h4 class="text-light">NOVAWEAR</h4>
+      <p class="text-muted small">CA Transparency In Supply Chain | Privacy Policy | Interest Based Ads | Do Not Sell or
+        Share My Personal Information | Terms & Conditions | Web ID: 246409064 | Copyright © 2024 NOVAWEAR. All rights
+        reserved.
+      </p>
+      <h3 class="text-muted"><span class="fa fa-map-marker"></span> India</h3>
+    </div>
+  </div>
+</body>
+
+</html>

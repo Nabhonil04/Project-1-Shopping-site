@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <title>Sign Up | NOVAWEAR</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+
+    body {
+      font-family: tektur;
+      background-color: #0D0D0D;
+      background-image: url(https://wallpaperset.com/w/full/f/3/5/521124.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    .container-fluid {
+      padding: 0;
+    }
+
+    /* Navigation Styles */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 20px;
+    }
+
+    .navbar-nav {
+      margin: 0 20px;
+    }
+
+    .navbar-item {
+      margin: 0 15px;
+    }
+
+    .navbar-link {
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-link:hover {
+      color: #00eaff;
+      text-decoration: none;
+    }
+
+    .active .navbar-link {
+      color: #00eaff;
+    }
+
+    #login {
+      border-color: #00eaff;
+      transition: all 0.3s ease;
+    }
+
+    #login:hover {
+      background-color: #00eaff;
+    }
+
+    #login:hover .navbar-link {
+      color: #000;
+    }
+
+    #head {
+      font-size: 3rem;
+      letter-spacing: 5px;
+      margin: 30px 0;
+      text-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
+    }
+
+    /* Form Styles */
+    .signup-container {
+      max-width: 800px;
+      margin: 20px auto 50px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
+    }
+
+    .form-title {
+      color: #00eaff;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 50px;
+      padding: 12px 20px;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 0 3px rgba(0, 234, 255, 0.5);
+      background-color: #fff;
+    }
+
+    .btn-signup {
+      background: linear-gradient(45deg, #00eaff, #0066ff);
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      margin-top: 15px;
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .btn-signup:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(45deg, #0066ff, #00eaff);
+    }
+
+    .login-link {
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    .login-link a {
+      color: #00eaff;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    #conclusion {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      margin-top: 50px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #conclusion h4 {
+      color: #00eaff;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-sm sticky-top navbar-light d-flex justify-content-between">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navigation">
+        <div id="x" class="d-flex justify-content-between">
+          <ul class="navbar-nav">
+            <li class="navbar-item">
+              <a class="navbar-link" href="../index.html">Home</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="Men.html">Men</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="Women.html">Women</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="Accessories.html">Accessories</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="contactus.html">Contact Us</a>
+            </li>
+          </ul>
+          <ul id="nav2" class="navbar-nav">
+            <li class="navbar-item">
+              <button id="login" class="btn btn-outline-light"><a class="navbar-link" href="Login.html">Log in</a></button>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="userprofile.html"><span class="fa fa-user-circle"
+                  style="font-size: 30px;"></span></a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="cart.html"><span class="fa fa-shopping-bag"
+                  style="font-size: 20px;"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h1 id="head" class="text-center">NOVAWEAR</h1>
+
+    <div class="signup-container">
+      <h2 class="form-title text-center">Create Your Account</h2>
+      <form class="needs-validation" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="username">Full Name</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter your full name" name="username" required>
+              <div class="invalid-feedback">Please provide your full name</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="example@novawear.com" name="email" required>
+              <div class="invalid-feedback">Please provide a valid email address</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" placeholder="+91 XXXXXXXXXX" name="phone" required>
+              <div class="invalid-feedback">Please provide a valid phone number</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country" name="country" class="form-control" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="India">India</option>
+                <option value="Japan">Japan</option>
+                <option value="Russia">Russia</option>
+                <option value="France">France</option>
+                <option value="Italy">Italy</option>
+                <option value="USA">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+              </select>
+              <div class="invalid-feedback">Please select your country</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="address1">Address Line 1</label>
+              <input type="text" class="form-control" id="address1" placeholder="Building, block, plot" name="address1" required>
+              <div class="invalid-feedback">Please provide your address</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="address2">Address Line 2</label>
+              <input type="text" class="form-control" id="address2" placeholder="Lane, colony, city division" name="address2">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="pincode">Pincode</label>
+              <input type="text" class="form-control" id="pincode" placeholder="110033" name="pincode" required>
+              <div class="invalid-feedback">Please provide a valid pincode</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="dob">Date of Birth</label>
+              <input type="date" class="form-control" id="dob" name="dob" required>
+              <div class="invalid-feedback">Please provide your date of birth</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="********" name="password" maxlength="12" required>
+              <div class="invalid-feedback">Password is required (8-12 characters)</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" class="form-control" id="confirm-password" placeholder="********" name="confirm-password" maxlength="12" required>
+              <div class="invalid-feedback">Please confirm your password</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="terms" required>
+          <label class="form-check-label" for="terms">I agree to the <a href="#" style="color: #00eaff;">Terms and Conditions</a> and <a href="#" style="color: #00eaff;">Privacy Policy</a></label>
+          <div class="invalid-feedback">You must agree before submitting</div>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn-signup">Create Account</button>
+          <p class="login-link mt-3">Already have an account? <a href="Login.html">Log in here</a></p>
+        </div>
+      </form>
+    </div>
+
+    <div id="conclusion">
+      <h6 class="text-center text-muted">Promotion ends 1.8.24 at 11:59 PM PT. Prices are as marked.</h6>
+      <h6 class="text-center text-muted">Exclusions apply. Cannot be combined with any other offer. Only valid at NOVAWEAR.</h6>
+      <h6 class="text-center text-muted">Not valid on gift cards or previous purchases.</h6>
+      <h4 class="text-light text-center">NOVAWEAR</h4>
+      <p class="text-muted small text-center">CA Transparency In Supply Chain | Privacy Policy | Interest Based Ads | Do Not Sell or Share My Personal Information | Terms & Conditions | Web ID: 246409064 | Copyright © 2024 NOVAWEAR. All rights reserved.
+      </p>
+      <h3 class="text-muted text-center"><span class="fa fa-map-marker"></span> India</h3>
+    </div>
+  </div>
+
+  <script>
+    // Form validation script
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            } else {
+              // Check if passwords match
+              var password = document.getElementById('password');
+              var confirmPassword = document.getElementById('confirm-password');
+              
+              if (password.value !== confirmPassword.value) {
+                confirmPassword.setCustomValidity('Passwords do not match');
+                event.preventDefault();
+                event.stopPropagation();
+              } else {
+                confirmPassword.setCustomValidity('');
+                event.preventDefault();
+                alert('Account created successfully! Redirecting to login page...');
+                setTimeout(function() {
+                  window.location.href = 'Login.html';
+                }, 1500);
+              }
+            }
+            form.classList.add('was-validated');
+          }, false);
+          
+          // Real-time password matching validation
+          var password = document.getElementById('password');
+          var confirmPassword = document.getElementById('confirm-password');
+          
+          confirmPassword.addEventListener('input', function() {
+            if (password.value !== confirmPassword.value) {
+              confirmPassword.setCustomValidity('Passwords do not match');
+            } else {
+              confirmPassword.setCustomValidity('');
+            }
+          });
+        });
+      }, false);
+    })();
+  </script>
+</body>
+
+</html>
+

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>USER PROFILE PAGE | NOVAWEAR</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tektur">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// Show Account section by default
+			$("#myaccount").show();
+			
+			// Header click to go to home page
+			$("#head").click(function() {
+				window.location.href = "../index.html";
+			});
+			
+			// Navigation hover effects
+			$("nav").mouseenter(function() {
+				$("nav").css({"background-color": "white"});
+				$(".navbar-link").css({"color": "black"});
+			});
+
+			$("nav").mouseleave(function() {
+				$("nav").css({"background-color": "#292828"});
+				$(".navbar-link").css({"color": "white"});
+			});
+			
+			// Toggle sidenav when button is clicked
+			$(".profile button").click(function () {
+				$(".sidenav").toggle();
+			});
+			
+			// Show sidenav by default on larger screens
+			if ($(window).width() > 768) {
+				$(".sidenav").show();
+			}
+			
+			// Handle window resize
+			$(window).resize(function() {
+				if ($(window).width() > 768) {
+					$(".sidenav").show();
+				} else {
+					$(".sidenav").hide();
+				}
+			});
+			
+			// Tab switching functionality
+			$("#Account").click(function () {
+				$("#myaccount").show();
+				$("#myaccount2, #myaccount3, #myaccount4, #myaccount5").hide();
+				$(".sidenav a").removeClass("active");
+				$(this).addClass("active");
+			});
+			
+			$("#Password").click(function () {
+				$("#myaccount2").show();
+				$("#myaccount, #myaccount3, #myaccount4, #myaccount5").hide();
+				$(".sidenav a").removeClass("active");
+				$(this).addClass("active");
+			});
+			
+			$("#Orders").click(function () {
+				$("#myaccount3").show();
+				$("#myaccount, #myaccount2, #myaccount4, #myaccount5").hide();
+				$(".sidenav a").removeClass("active");
+				$(this).addClass("active");
+			});
+			
+			$("#Notification").click(function () {
+				$("#myaccount4").show();
+				$("#myaccount, #myaccount2, #myaccount3, #myaccount5").hide();
+				$(".sidenav a").removeClass("active");
+				$(this).addClass("active");
+			});
+			
+			$("#Contact\ Us").click(function () {
+				$("#myaccount5").show();
+				$("#myaccount, #myaccount2, #myaccount3, #myaccount4").hide();
+				$(".sidenav a").removeClass("active");
+				$(this).addClass("active");
+			});
+			
+			// Set Account as active by default
+			$("#Account").addClass("active");
+		});
+	</script>
+	<style>
+		body {
+			background-color: #0D0D0D;
+			background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("C:/Users/nilna/Downloads/CSW Project/CSW Project/Images/login.jpg");
+			background-size: cover;
+			background-position: center;
+			font-family: Tektur;
+			color: white;
+			margin: 0;
+			padding: 0;
+		}
+
+		.sidenav {
+			height: 100%;
+			width: 250px;
+			position: fixed;
+			z-index: 10;
+			top: 80px;
+			left: 0;
+			background-color: #333333;
+			overflow-x: hidden;
+			padding-top: 20px;
+			display: none;
+			color: white;
+			border-right: 1px solid #444;
+		}
+
+		.sidenav a {
+			padding: 12px 16px;
+			text-decoration: none;
+			font-size: 18px;
+			color: #818181;
+			display: block;
+			transition: 0.3s;
+			border-left: 3px solid transparent;
+		}
+
+		.sidenav a:hover, .sidenav a.active {
+			color: #f1f1f1;
+			background-color: #444;
+			border-left: 3px solid #39FF14;
+		}
+
+		.profile {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			color: white;
+			min-height: 600px;
+			padding: 20px;
+			margin-top: 20px;
+		}
+
+		#myaccount, #myaccount2, #myaccount3, #myaccount4, #myaccount5 {
+			border-radius: 10px;
+			width: 500px;
+			display: none;
+			background-color: rgba(0, 0, 0, 0.7);
+			padding: 20px;
+			margin-top: 20px;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			backdrop-filter: blur(10px);
+		}
+
+		.profile button {
+			margin: 20px;
+			background-color: #00eaff;
+			color: black;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			cursor: pointer;
+			transition: all 0.3s;
+			font-weight: bold;
+		}
+
+		.profile button:hover {
+			background-color: #00c6d8;
+			transform: scale(1.05);
+		}
+
+		#myaccount3 {
+			border: 1px solid white;
+			border-radius: 10px;
+			width: 500px;
+			background-color: rgba(0, 0, 0, 0.7);
+			padding: 20px;
+			margin-top: 20px;
+		}
+
+		#myaccount4 {
+			border: 1px solid #3333ff;
+			border-radius: 10px;
+			width: 500px;
+			display: none;
+			background-color: rgba(0, 0, 0, 0.7);
+			padding: 20px;
+			margin-top: 20px;
+		}
+
+		#myaccount5 {
+			display: none;
+			border: 1px solid #ffff33;
+			border-radius: 10px;
+			width: 500px;
+			background-color: rgba(0, 0, 0, 0.7);
+			padding: 20px;
+			margin-top: 20px;
+		}
+		
+		.profile input {
+			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #444;
+			background-color: rgba(255, 255, 255, 0.1);
+			color: white;
+			margin: 5px 0;
+		}
+
+</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-sm sticky-top navbar-light d-flex justify-content-between" style="background-color: #292828; transition: 0.5s;">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" 
+			aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navigation">
+			<div id="x" class="d-flex justify-content-between" style="width: 100%;">
+				<ul id="nav1" class="navbar-nav">
+					<li class="navbar-item">
+						<a class="navbar-link" href="../index.html" style="color: white; margin-left: 20px;">Home</a>
+					</li>
+					<li class="navbar-item">
+						<a class="navbar-link" href="Men.html" style="color: white; margin-left: 20px;">Men</a>
+					</li>
+					<li class="navbar-item">
+						<a class="navbar-link" href="Women.html" style="color: white; margin-left: 20px;">Women</a>
+					</li>
+					<li class="navbar-item">
+						<a class="navbar-link" href="Accessories.html" style="color: white; margin-left: 20px;">Accessories</a>
+					</li>
+					<li class="navbar-item">
+						<a class="navbar-link" href="contactus.html" style="color: white; margin-left: 20px;">Contact Us</a>
+					</li>
+				</ul>
+				<ul id="nav2" class="navbar-nav" style="margin-right: 30px;">
+					<li class="navbar-item">
+						<button id="login" class="btn btn-outline-light" style="margin-left: 20px;"><a class="navbar-link" href="Login.html" style="color: white;">Log in</a></button>
+					</li>
+					<li class="navbar-item active">
+						<a class="navbar-link" href="userprofile.html" style="color: white; margin-left: 20px;"><span class="fa fa-user-circle" style="font-size: 30px;"></span></a>
+					</li>
+					<li class="navbar-item">
+						<a class="navbar-link" href="cart.html" style="color: white; margin-left: 20px;"><span class="fa fa-shopping-bag" style="font-size: 20px;"></span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<h1 id="head" class="text-center mt-3">NOVAWEAR</h1>
+	<h1 style="text-align: center;">MY PROFILE</h1>
+
+	<div class="profile">
+		<div class="sidenav">
+			<a href="#account" id="Account"> Account</a>
+			<a href="#password" id="Password">Password</a>
+			<a href="#orders" id="Orders">Orders</a>
+			<a href="#notification" id="Notification">Notification</a>
+			<a href="contactus.html" id="Contact Us">Contact Us</a>
+		</div>
+		<button style="margin: 20px;"><img src="https://cdn-icons-png.flaticon.com/512/9250/9250895.png" height="50px"></button>
+		<div id="myaccount">
+			<h1>Account Setting</h1>
+			<input type="text" placeholder="First Name" style=" width: 50% ">
+			<br>
+			<br>
+			<input type="text" placeholder="Last Name" style="width: 50%">
+			<br>
+			<br>
+			<input type="text" placeholder="Email" style="width: 50%">
+			<br>
+			<br>
+			<input type="text" placeholder="Phone Number" style="width: 50%">
+			<br>
+			<br>
+			<input type="text" placeholder="Address" style="width: 50% ">
+			<br>
+			<button>Edit your details</button>
+		</div>
+		<div id="myaccount2">
+			<h1>Password Setting</h1>
+			<label style="color: white">Old Password</label>
+			<input type="password" id="pwd" minlength="8">
+			<br>
+			<br>
+			<label>New Password</label>
+			<input type="password" id="pwd" minlength="8">
+			<br>
+			<br>
+			<label>Confirm Password</label>
+			<input type="password" id="pwd" minlength="8">
+		</div>
+		<div id="myaccount3">
+			<h1>Orders</h1>
+			<div class="row justify-content-between">
+				<i>Product Name<br><span class="text-muted">Brief Description</span></i>
+				<b class="text-muted">$125</b>
+			</div>
+			<hr>
+			<div class="row justify-content-between">
+				<i>Second Name<br><span class="text-muted">Brief Description</span></i>
+				<b class="text-muted">$82</b>
+			</div>
+			<hr>
+			<div class="row justify-content-between">
+				<i>Third Name<br><span class="text-muted">Brief Description</span></i>
+				<b class="text-muted">$563</b>
+			</div>
+			<hr>
+			<div class="row justify-content-between text-success">
+				<i>Promo Code<br><span>Example Code</span></i>
+				<b>-$267</b>
+			</div>
+			<hr>
+			<div class="row justify-content-between">
+				<i>Total(USD)</i>
+				<b>$503</b>
+			</div>
+			<button>Order Details</button>
+		</div>
+		<div id="myaccount4">
+			<h1>Notifications</h1>
+			<h3>No Notifications yet</h3>
+		</div>
+
+		<div id="myaccount5">
+			<h1 style="color:white">Contact Us</h1>
+		</div>
+	</div>
+</body>
+
+</html>
+

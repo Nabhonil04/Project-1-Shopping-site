@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Cart | NOVAWEAR</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tektur">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: black;
+            font-family: Tektur;
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+
+        a::after {
+            content: "";
+            position: absolute;
+            background-color: white;
+            height: 2px;
+            width: 0;
+            left: 0px;
+            bottom: 0px;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        a:hover:after {
+            width: 100%;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .container-fluid {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navbar li a {
+            color: white;
+            position: relative;
+        }
+
+        .navbar li a::after {
+            background-color: black;
+        }
+
+        nav {
+            background-color: #292828;
+            transition: 0.5s;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        #nav2 {
+            margin-right: 30px;
+        }
+
+        #nav2 a::after {
+            width: 0%;
+        }
+
+        #login:hover {
+            border-color: black;
+        }
+
+        #x {
+            width: 100%;
+        }
+
+        #pikachu {
+            background-color: rgb(185, 179, 179);
+            margin-top: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #444;
+            width: 100%;
+        }
+
+        .product-container:last-child {
+            border-bottom: none;
+        }
+
+        .product-image {
+            height: 150px;
+            width: auto;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        .product-details {
+            flex: 1;
+            color: black;
+            padding: 10px;
+        }
+
+        #cart1 {
+            font-family: tektur;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        #head {
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        #raichu {
+            background-color: rgb(185, 179, 179);
+            margin-top: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border-radius: 15px;
+            height: fit-content;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        #raichu1 {
+            color: black;
+            margin-top: 10px;
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        #raichu button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+        }
+        
+        select {
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background-color: white;
+            color: black;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .price-tag {
+            background-color: black;
+            color: white;
+            width: auto;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("nav").mouseenter(function () {
+                $("nav").css({ "background-color": "white" });
+                $(".navbar-link").css({ "color": "black" });
+            });
+
+            $("nav").mouseleave(function () {
+                $("nav").css({ "background-color": "#292828" });
+                $(".navbar-link").css({ "color": "white" });
+            });
+            $("#head").click(function () {
+                window.location.href = "../index.html";
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm sticky-top navbar-light d-flex justify-content-between">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navigation">
+                <div id="x" class="d-flex justify-content-between">
+                    <ul id="nav1" class="navbar-nav">
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="Men.html">Men</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="Women.html">Women</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="Accessories.html">Accessories</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="contactus.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <ul id="nav2" class="navbar-nav">
+                        <li class="navbar-item">
+                            <button id="login" class="btn btn-outline-light"><a class="navbar-link"
+                                    href="Login.html">Log in</a></button>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="navbar-link" href="userprofile.html"><span class="fa fa-user-circle"
+                                    style="font-size: 30px;"></span></a>
+                        </li>
+                        <li class="navbar-item active">
+                            <a class="navbar-link" href="cart.html"><span class="fa fa-shopping-bag"
+                                    style="font-size: 20px;"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1 id="head" class="text-center">NOVAWEAR</h1>
+        <h3 class="text-center">Shopping Bag</h3>
+        <div class=" d-flex flex-wrap">
+            <div id="pikachu" class="col-lg-8">
+                <div class="product-container">
+                    <img src="https://karnagestreetwear.com/cdn/shop/products/mens-techwear-jacket_600x.jpg?v=1663667100"
+                        alt="MENS TECHWEAR JACKET" class="product-image">
+                    <div class="product-details">
+                        <p id="cart1"><b>MENS TECHWEAR JACKET</b></p>
+                        <label for="quantity1">Quantity:</label>
+                        <select id="quantity1" name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <div class="price-tag">Price: 1559/-</div>
+                        <label for="color1">Color:</label>
+                        <select id="color1" name="color">
+                            <option value="Black">Black</option>
+                            <option value="White">White</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="product-container">
+                    <img src="https://karnagestreetwear.com/cdn/shop/products/techwear-black-pants-781_600x.jpg?v=1627224467"
+                        alt="TECHWEAR BLACK PANTS" class="product-image">
+                    <div class="product-details">
+                        <p id="cart1"><b>TECHWEAR BLACK PANTS</b></p>
+                        <label for="quantity2">Quantity:</label>
+                        <select id="quantity2" name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <div class="price-tag">Price: 1559/-</div>
+                        <label for="color2">Color:</label>
+                        <select id="color2" name="color">
+                            <option value="Black">Black</option>
+                            <option value="White">White</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="product-container">
+                    <img src="https://karnagestreetwear.com/cdn/shop/products/streetwear-sneakers_600x.jpg?v=1662201569"
+                        alt="STREETWEAR SNEAKERS" class="product-image">
+                    <div class="product-details">
+                        <p id="cart1"><b>STREETWEAR SNEAKERS</b></p>
+                        <label for="quantity3">Quantity:</label>
+                        <select id="quantity3" name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <div class="price-tag">Price: 1559/-</div>
+                        <label for="color3">Color:</label>
+                        <select id="color3" name="color">
+                            <option value="Black">Black</option>
+                            <option value="White">White</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="raichu" class="col-lg-3">
+                <h4 style="color: black; margin-bottom: 20px;">Order Summary</h4>
+                <div style="color: black; margin-bottom: 15px;">
+                    <div class="d-flex justify-content-between">
+                        <span>Items (3):</span>
+                        <span>₹4,677.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Shipping:</span>
+                        <span>₹0.00</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between" style="font-weight: bold;">
+                        <span>Total:</span>
+                        <span>₹4,677.00</span>
+                    </div>
+                </div>
+
+                <label for="raichu1">Payment Method:</label>
+                <select id="raichu1">
+                    <option value="EMI">EMI</option>
+                    <option value="UPI">UPI</option>
+                    <option value="CREDIT-CARD">CREDIT CARD</option>
+                    <option value="CASH-ON-DELIVERY">CASH ON DELIVERY</option>
+                </select>
+
+                <button class="btn btn-dark">
+                    <a href="checkout.html" style="width:100%; height:100%; color: white; text-decoration: none;">Proceed to Checkout</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+

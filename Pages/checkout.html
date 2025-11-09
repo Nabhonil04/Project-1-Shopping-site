@@ -1,0 +1,312 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tektur">
+
+
+    <style>
+        body {
+            background-color: #0D0D0D;
+            background-size: cover;
+            background-position: center;
+            font-family: Tektur;
+            color: white;
+        }
+
+        .optional {
+            color: rgb(222, 218, 218);
+        }
+
+        #cart-no {
+            width: 25px;
+            margin-left: 88%;
+            text-align: center;
+            background-color: transparent;
+            border-radius: 40%;
+        }
+
+        .cart-item {
+            border: solid lightgray;
+            padding: 4px;
+            border-width: 0px 1px 1px 1px;
+            color: aliceblue;
+        }
+
+        .pd {
+            display: flex;
+            align-items: center;
+        }
+
+        .promo {
+            background-color: transparent;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            border: solid lightgrey 1px;
+            border-radius: 10px;
+            background-color: #000000;
+        }
+
+        #reedem {
+            border-top-left-radius: 0%;
+            border-bottom-left-radius: 0%;
+        }
+
+        h5 {
+            color: aliceblue;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $("#head").click(function() {
+                window.location.href = "../index.html";
+            });
+            
+            $("nav").mouseenter(function() {
+                $("nav").css({"background-color": "white"});
+                $(".navbar-link").css({"color": "black"});
+            });
+
+            $("nav").mouseleave(function() {
+                $("nav").css({"background-color": "#292828"});
+                $(".navbar-link").css({"color": "white"});
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm sticky-top navbar-light d-flex justify-content-between" style="background-color: #292828; transition: 0.5s;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" 
+            aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navigation">
+            <div id="x" class="d-flex justify-content-between" style="width: 100%;">
+                <ul id="nav1" class="navbar-nav">
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="../index.html" style="color: white; margin-left: 20px;">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="Men.html" style="color: white; margin-left: 20px;">Men</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="Women.html" style="color: white; margin-left: 20px;">Women</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="Accessories.html" style="color: white; margin-left: 20px;">Accessories</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="contactus.html" style="color: white; margin-left: 20px;">Contact Us</a>
+                    </li>
+                </ul>
+                <ul id="nav2" class="navbar-nav" style="margin-right: 30px;">
+                    <li class="navbar-item">
+                        <button id="login" class="btn btn-outline-light" style="margin-left: 20px;"><a class="navbar-link" href="Login.html" style="color: white;">Log in</a></button>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="userprofile.html" style="color: white; margin-left: 20px;"><span class="fa fa-user-circle" style="font-size: 30px;"></span></a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="cart.html" style="color: white; margin-left: 20px;"><span class="fa fa-shopping-bag" style="font-size: 20px;"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 id="head" class="text-center mt-3" style="cursor: pointer;">NOVAWEAR</h1>
+    <div class="container mt-3 mb-3">
+        <form action="/action_page.php">
+            <div class="row">
+                <div class="col-sm-8 mt-2 was-validated">
+                    <label for="billing-addres" class="h5">Billing address</label>
+                    <div id="billing-addres" class="mt-3">
+                        <div class="row">
+                            <div class="col">
+                                <label for="fn" class="form-label">First name</label>
+                                <input type="text" id="fn" class="form-control" required>
+
+                            </div>
+                            <div class="col">
+                                <label for="ln" class="form-label">Last name</label>
+                                <input type="text" id="ln" class="form-control">
+                            </div>
+                        </div>
+                        <label for="un" class="form-label mt-2">Username</label>
+                        <div class="input-group" id="un">
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control" placeholder="Username" required>
+                        </div>
+                        <label for="email" class="form-label mt-2">Email<span class="optional">(Optional)</span></label>
+                        <input type="email" id="email" placeholder="you@gmail.com" class="form-control">
+                        <label for="address" class="form-label mt-2">Address</label>
+                        <input type="text" id="address" placeholder="1234 Main St" class="form-control" required>
+                        <label for="address2" class="form-label mt-2">Address 2<span
+                                class="optional">(Optional)</span></label>
+                        <input type="text" id="address2" placeholder="Apartment or suite" class="form-control">
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="country" class="form-label mt-2">Country</label>
+                                <select class="form-select" id="country" required>
+                                    <option>Choose..</option>
+                                    <option>India</option>
+                                    <option>USA</option>
+                                    <option>Russia</option>
+                                    <option>Japan</option>
+                                </select>
+                            </div>
+                            <div class="col-sm">
+                                <label for="state" class="form-label mt-2">State</label>
+                                <select class="form-select" id="state" required>
+                                    <option>Choose..</option>
+                                    <option>Odisha</option>
+                                    <option>West Bengal</option>
+                                    <option>Karnataka</option>
+                                    <option>Assam</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="zip" class="form-label mt-2">Zip</label>
+                                <input type="text" id="zip" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input type="checkbox" class="form-check-input" id="chk1">
+                            <label for="chk1" class="form-check-label">Shipping address is the same as my billing
+                                address</label>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input type="checkbox" class="form-check-input" id="chk2">
+                            <label for="chk2" class="form-check-label">Save this information for next time</label>
+                        </div>
+                    </div>
+                    <hr>
+                    <label for="payment" class="mt-2 h5">Payment</label>
+                    <div id="payment" class="mt-3">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="credit" name="pay" value="credit">
+                            <label class="form-check-label" for="credit">Credit card</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="debit" name="pay" value="debit">
+                            <label class="form-check-label" for="debit">Debit card</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="paypal" name="pay" value="paypal">
+                            <label class="form-check-label" for="paypal">PayPal</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm mt-2">
+                            <label for="card-name" class="form-label">Name on card</label>
+                            <input type="text" id="card-name" class="form-control" required>
+                            <div class="form-text" style="color: aliceblue;">Full name as displayed on card</div>
+                        </div>
+                        <div class="col-sm mt-2">
+                            <label for="card-no" class="form-label">Credit card number</label>
+                            <input type="text" id="card-no" class="form-control" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3 mt-2">
+                                <label for="exp" class="form-label">Expiration</label>
+                                <input type="text" id="exp" class="form-control" required>
+                            </div>
+                            <div class="col-sm-3 mt-2 mb-4">
+                                <label for="cvv" class="form-label">CVV</label>
+                                <input type="text" id="cvv" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 mt-2">
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5 style="color: aliceblue;">Your cart</h5>
+                        </div>
+                        <div class="col-sm">
+                            <div id="cart-no">3</div>
+                        </div>
+                    </div>
+                    <div id="cart" class="mt-3">
+                        <div class="row cart-item" style="border:solid lightgray 1px; border-radius: 10px 10px 0 0;">
+                            <div class="col-sm">
+                                <h6>MENS TECHWEAR JACKET</h6>
+                                <div class="form-text" style="color: aliceblue;">Breif descripton</div>
+                            </div>
+                            <div class="col-sm" style="text-align: right;">
+                                <p style="color: aliceblue;">$1559</p>
+                            </div>
+                        </div>
+                        <div class="row cart-item">
+                            <div class="col-sm">
+                                <h6>TECHWEAR BLACK PANTS</h6>
+                                <div class="form-text" style="color: aliceblue;">Breif descripton</div>
+                            </div>
+                            <div class="col-sm" style="text-align: right;">
+                                <p style="color: aliceblue;">$1559</p>
+                            </div>
+                        </div>
+                        <div class="row cart-item">
+                            <div class="col-sm ">
+                                <h6>STREETWEAR SNEAKERS</h6>
+                                <div class="form-text" style="color: aliceblue;">Breif descripton</div>
+                            </div>
+                            <div class="col-sm" style="text-align: right;">
+                                <p style="color: aliceblue;">$1559</p>
+                            </div>
+                        </div>
+                        <div class="row cart-item promo">
+                            <div class="col-sm">
+                                <h6 class="text-success">Promo code</h6>
+                                <div class="form-text text-success">EXAMPLECODE</div>
+                            </div>
+                            <div class="col-sm" style="text-align: right;">
+                                <p style="color: aliceblue;">-$5</p>
+                            </div>
+                        </div>
+                        <div class="row cart-item" style="border-radius: 0 0 10px 10px;">
+                            <div class="col-sm pd">
+                                <h6>Total(USD)</h6>
+
+                            </div>
+                            <div class="col-sm" style="text-align: right;">
+                                <p style="color: aliceblue;">$4672</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row box mt-3">
+                        <div class="row" style="width: 100%;">
+                            <input class="col-sm-8" type="text" placeholder="Promo code">
+                            <button type="button" class="btn btn-success col-sm-4" id="reedem">Redeem</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            
+            <hr>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-block">Continue to checkout</button>
+            </div>
+        </form>
+
+
+    </div>
+
+</body>
+
+</html>
+
